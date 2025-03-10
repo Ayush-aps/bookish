@@ -1,0 +1,48 @@
+<%- include('../partials/header') %>
+<%- include('../partials/nav') %>
+
+<div class="container mt-4">
+  <h2>Seller Dashboard</h2>
+  <p>Welcome, <%= seller.name %>!</p>
+  <hr />
+
+  <% if (currentUser.role === 'approvedSeller') { %>
+    <a href="/books/add" class="btn btn-info mb-3">Add New Book</a>
+  <% } else { %>
+    <p class="text-muted">
+      You are not approved to add books yet. Wait for admin approval.
+    </p>
+  <% } %>
+
+  <h4>Your Books:</h4>
+  <% if (sellerBooks.length === 0) { %>
+    <p>No books added yet.</p>
+  <% } else { %>
+    <div class="row">
+      <% sellerBooks.forEach(book => { %>
+        <div class="col-md-3">
+          <div class="card my-2">
+            <img src="<%= book.image %>" class="card-img-top" alt="<%= book.title %>">
+            <div class="card-body">
+              <h5 class="card-title"><%= book.title %></h5>
+              <p class="card-text">$<%= book.price %></p>
+
+              <!-- If "approvedSeller" (and owns the book) OR admin, show Edit/Delete -->
+              <% if (
+                (currentUser.role === 'approvedSeller' && book.ownerId === currentUser.id)
+                || currentUser.role === 'admin'
+              ) { %>
+                <a href="/books/<%= book.id %>/edit" class="btn btn-warning btn-sm">Edit</a>
+                <form action="/books/<%= book.id %>/delete" method="POST" style="display:inline;">
+                  <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</div>
+
+<%- include('../partials/footer') %>

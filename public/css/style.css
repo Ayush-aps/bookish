@@ -1,0 +1,44 @@
+/* Basic styling */
+body {
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  /* Uiverse fancy button (small example) */
+  .btn-uiverse {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+  }
+  .btn-uiverse:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Larger version for homepage button */
+  .btn-uiverse-lg {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .btn-uiverse-lg:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  

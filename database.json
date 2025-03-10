@@ -1,0 +1,195 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Seller Alice",
+      "email": "alice@bookish.com",
+      "password": "$2b$10$2CSt6kAIchE3Xe.WQjZcgeXJbrFz.LUTqCkW3LKd1dB8AtJ9/N8z2",
+      "role": "seller"
+    },
+    {
+      "id": "4",
+      "name": "User Charlie",
+      "email": "charlie@bookish.com",
+      "password": "$2b$10$2CSt6kAIchE3Xe.WQjZcgeXJbrFz.LUTqCkW3LKd1dB8AtJ9/N8z2",
+      "role": "approvedSeller"
+    },
+    {
+      "id": "1741551337461",
+      "name": "APS",
+      "email": "ausingh2020@gmail.com",
+      "password": "$2b$10$X2d2Q1y.kcywkEPRbqudVe6vEnP6Hy6Unu44QpXKVIZVua44TC9L.",
+      "role": "user"
+    },
+    {
+      "id": "1741551412105",
+      "name": "APS",
+      "email": "singh2020@gmail.com",
+      "password": "$2b$10$ASLinXQxLklwP5KIunSSTOGGOP9maZedrDwuqAP500VsQGGBzuwoC",
+      "role": "admin"
+    },
+    {
+      "id": "1741598156471",
+      "name": "APS",
+      "email": "asingh2020@gmail.com",
+      "password": "$2b$10$Y20dYFI1ihY6Z3ThmGX5SOm8d8WVfMaMdpG0.Ei2QYBqGqVI7q/ZW",
+      "role": "approvedSeller"
+    },
+    {
+      "id": "1741602518316",
+      "name": "pushp",
+      "email": "pushpgarg9765@gmail.com",
+      "password": "$2b$10$cTCtXv.I9xlCxK6859GXjemK3fjXvSL6s1fRKZTPjqmnKVrBXwI7y",
+      "role": "seller"
+    }
+  ],
+  "books": [
+    {
+      "id": "101",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Classic",
+      "price": 10.99,
+      "image": "https://m.media-amazon.com/images/I/71FTb9X6wsL._SL1500_.jpg",
+      "ownerId": "2"
+    },
+    {
+      "id": "102",
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Classic",
+      "price": 8.99,
+      "image": "https://m.media-amazon.com/images/I/81Sn0HEfJUL._SL1500_.jpg",
+      "ownerId": "2"
+    },
+    {
+      "id": "103",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "genre": "Self-help",
+      "price": 14.5,
+      "image": "https://m.media-amazon.com/images/I/51-uspgqWIL._SL350_.jpg",
+      "ownerId": "3"
+    },
+    {
+      "id": "104",
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert T. Kiyosaki",
+      "genre": "Self-help",
+      "price": 9.99,
+      "image": "https://m.media-amazon.com/images/I/81BE7eeKzAL._SL1500_.jpg",
+      "ownerId": "3"
+    },
+    {
+      "id": "105",
+      "title": "Harry Potter",
+      "author": "J.K. Rowling",
+      "genre": "Fantasy",
+      "price": 12.99,
+      "image": "https://m.media-amazon.com/images/I/51UoqRAxwEL._SL350_.jpg",
+      "ownerId": "2"
+    },
+    {
+      "id": "106",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": "Science Fiction",
+      "price": 11.5,
+      "image": "https://m.media-amazon.com/images/I/91AV1k-49XL._SL1500_.jpg",
+      "ownerId": "3"
+    },
+    {
+      "id": "107",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Classic",
+      "price": 7.5,
+      "image": "https://m.media-amazon.com/images/I/81Ox45kDWKL._SL1500_.jpg",
+      "ownerId": "2"
+    },
+    {
+      "id": "108",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Romance",
+      "price": 6.99,
+      "image": "https://m.media-amazon.com/images/I/81OthjkJBuL._SL1500_.jpg",
+      "ownerId": "3"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "bookId": "101",
+      "userId": "4",
+      "text": "Loved this classic!",
+      "createdAt": "2025-03-01T10:00:00.000Z"
+    },
+    {
+      "id": "r2",
+      "bookId": "103",
+      "userId": "4",
+      "text": "Very practical tips",
+      "createdAt": "2025-03-02T14:30:00.000Z"
+    },
+    {
+      "id": "r3",
+      "bookId": "105",
+      "userId": "4",
+      "text": "A magical journey!",
+      "createdAt": "2025-03-03T08:45:00.000Z"
+    },
+    {
+      "id": "r4",
+      "bookId": "101",
+      "userId": "4",
+      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "createdAt": "2025-03-04T09:00:00.000Z"
+    },
+    {
+      "id": "r5",
+      "bookId": "105",
+      "userId": "4",
+      "videoUrl": "https://www.w3schools.com/html/movie.mp4",
+      "createdAt": "2025-03-05T09:00:00.000Z"
+    },
+    {
+      "id": "r6",
+      "bookId": "108",
+      "userId": "4",
+      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "createdAt": "2025-03-06T09:00:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "o1",
+      "userId": "4",
+      "bookIds": [
+        "101",
+        "102"
+      ],
+      "totalPrice": 19.98,
+      "createdAt": "2025-01-15T09:00:00.000Z"
+    },
+    {
+      "id": "o2",
+      "userId": "4",
+      "bookIds": [
+        "103"
+      ],
+      "totalPrice": 14.5,
+      "createdAt": "2025-02-10T11:00:00.000Z"
+    },
+    {
+      "id": "o3",
+      "userId": "4",
+      "bookIds": [
+        "105",
+        "106"
+      ],
+      "totalPrice": 24.49,
+      "createdAt": "2025-03-02T15:30:00.000Z"
+    }
+  ]
+}

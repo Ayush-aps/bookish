@@ -1,0 +1,56 @@
+<%- include('../partials/header') %>
+<%- include('../partials/nav') %>
+
+<div class="container mt-4">
+  <h2>All Books</h2>
+
+  <!-- Show "Add New Book" if user is "approvedSeller" or "admin" -->
+  <% if (currentUser && (currentUser.role === 'approvedSeller' || currentUser.role === 'admin')) { %>
+    <a href="/books/add" class="btn btn-info mb-3">Add New Book</a>
+  <% } %>
+
+  <!-- Example search/filter form -->
+  <form method="GET" class="row g-3 mb-3">
+    <div class="col-md-3">
+      <input type="text" name="search" class="form-control" placeholder="Search title or author">
+    </div>
+    <div class="col-md-2">
+      <select name="genre" class="form-select">
+        <option>All</option>
+        <option>Classic</option>
+        <option>Fantasy</option>
+        <option>Science Fiction</option>
+        <option>Self-help</option>
+        <option>Romance</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <input type="number" step="0.01" name="minPrice" class="form-control" placeholder="Min Price">
+    </div>
+    <div class="col-md-2">
+      <input type="number" step="0.01" name="maxPrice" class="form-control" placeholder="Max Price">
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-outline-primary w-100">Filter</button>
+    </div>
+  </form>
+  <!-- end search/filter -->
+
+  <div class="row">
+    <% books.forEach(book => { %>
+      <div class="col-md-3">
+        <div class="card my-2">
+          <img src="<%= book.image %>" class="card-img-top" alt="<%= book.title %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= book.title %></h5>
+            <p class="card-text"><%= book.author %> - <%= book.genre %></p>
+            <p class="card-text">$<%= book.price %></p>
+            <a href="/books/<%= book.id %>" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

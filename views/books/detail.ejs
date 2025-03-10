@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<%- include('../partials/nav') %>
+
+<div class="container mt-4">
+  <h2><%= book.title %></h2>
+  <p>By <%= book.author %></p>
+  <p>Genre: <%= book.genre %></p>
+  <img src="<%= book.image %>" alt="<%= book.title %>" style="max-width: 200px;" />
+  <p>Price: $<%= book.price %></p>
+
+  <% if (book.ownerId === (currentUser ? currentUser.id : null)) { %>
+    <!-- Owner can't buy their own book -->
+    <p class="text-muted">This is your own book; you cannot buy it.</p>
+  <% } else { %>
+    <!-- Everyone else sees the "Add to Cart" button, including unlogged users -->
+    <form action="/cart/add" method="POST" class="d-inline">
+      <input type="hidden" name="bookId" value="<%= book.id %>">
+      <button type="submit" class="btn btn-success">Add to Cart</button>
+    </form>
+  <% } %>
+</div>
+
+<%- include('../partials/footer') %>
