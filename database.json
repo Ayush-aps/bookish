@@ -34,6 +34,13 @@
       "email": "asingh2020@gmail.com",
       "password": "$2b$10$Y20dYFI1ihY6Z3ThmGX5SOm8d8WVfMaMdpG0.Ei2QYBqGqVI7q/ZW",
       "role": "approvedSeller"
+    },
+    {
+      "id": "1741701721970",
+      "name": "Daivik",
+      "email": "daivik@gmail.com",
+      "password": "$2b$10$H4zihkt3EkKeBJe8JfasY.hll7GiJGCXm.uFveZS3uaFR2fUz8b/K",
+      "role": "user"
     }
   ],
   "books": [
