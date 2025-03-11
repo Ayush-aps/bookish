@@ -59,7 +59,7 @@
       "author": "George Orwell",
       "genre": "Classic",
       "price": 8.99,
-      "image": "https://m.media-amazon.com/images/I/81Sn0HEfJUL._SL1500_.jpg",
+      "image": "https://cdn.kobo.com/book-images/c9472126-7f96-402d-ba57-5ba4c0f4b238/353/569/90/False/nineteen-eighty-four-1984-george.jpg",
       "ownerId": "2"
     },
     {
@@ -95,7 +95,7 @@
       "author": "Frank Herbert",
       "genre": "Science Fiction",
       "price": 11.5,
-      "image": "https://m.media-amazon.com/images/I/91AV1k-49XL._SL1500_.jpg",
+      "image": "https://m.media-amazon.com/images/I/81Ua99CURsL.jpg",
       "ownerId": "3"
     },
     {
@@ -104,7 +104,7 @@
       "author": "Harper Lee",
       "genre": "Classic",
       "price": 7.5,
-      "image": "https://m.media-amazon.com/images/I/81Ox45kDWKL._SL1500_.jpg",
+      "image": "https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg",
       "ownerId": "2"
     },
     {
