@@ -12,6 +12,13 @@ body {
   color: #000;
   transition: background-color 0.3s, color 0.3s;
   font-family: 'Open Sans', sans-serif; /* optional font */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 /* Dark mode */
@@ -91,26 +98,6 @@ body {
 .navbar-nav .nav-link:hover {
   background-color: #000 !important;
   color: #FFC107 !important;
-  border-radius: 4px;
-}
-
-/* Footer styling */
-footer {
-  background-color: #FFC107;
-  color: #000;
-  padding: 20px;
-  text-align: center;
-  border-top: 2px solid #000;
-}
-footer a {
-  color: #000;
-  font-weight: 500;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #fff;
-  background-color: #000;
-  padding: 4px 8px;
   border-radius: 4px;
 }
 
@@ -205,6 +192,31 @@ p {
 }
 .mb-3 {
   margin-bottom: 1rem !important;
+}
+
+.footer {
+  background-color: #ffe619; /* Same as your existing color */
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-link{
+  color: black; /* Default link color */
+  text-decoration: none; /* Removes underline */
+  padding: 5px 10px; /* Adds spacing */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer-link:hover{
+  color: white; /* Changes link color on hover */
+  background-color: black; /* Adds background color on hover */
+  border-radius: 5px; /* Adds rounded corners */
+} 
+
+.footer-ul{
+  border-bottom: #000 solid 1px;
 }
 
 /* Responsive tweaks */
