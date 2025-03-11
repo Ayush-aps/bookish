@@ -5,7 +5,7 @@
       "name": "Seller Alice",
       "email": "alice@bookish.com",
       "password": "$2b$10$2CSt6kAIchE3Xe.WQjZcgeXJbrFz.LUTqCkW3LKd1dB8AtJ9/N8z2",
-      "role": "seller"
+      "role": "approvedSeller"
     },
     {
       "id": "4",
@@ -34,13 +34,6 @@
       "email": "asingh2020@gmail.com",
       "password": "$2b$10$Y20dYFI1ihY6Z3ThmGX5SOm8d8WVfMaMdpG0.Ei2QYBqGqVI7q/ZW",
       "role": "approvedSeller"
-    },
-    {
-      "id": "1741602518316",
-      "name": "pushp",
-      "email": "pushpgarg9765@gmail.com",
-      "password": "$2b$10$cTCtXv.I9xlCxK6859GXjemK3fjXvSL6s1fRKZTPjqmnKVrBXwI7y",
-      "role": "seller"
     }
   ],
   "books": [
