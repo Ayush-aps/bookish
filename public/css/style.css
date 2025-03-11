@@ -22,7 +22,7 @@ body {
 
 /* Uiverse fancy button (small example) */
 .btn-uiverse {
-  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  background: black;
   border: none;
   color: #fff;
   padding: 6px 12px;
@@ -50,6 +50,17 @@ body {
 .btn-uiverse-lg:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn-dark{
+  background: white;
+  border: none;
+  color: black;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
 }
 
 /* 

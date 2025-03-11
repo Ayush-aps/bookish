@@ -46,3 +46,18 @@
     </div>
   </div>
 </nav>
+<script>
+const toggleTheme = document.getElementById('toggle-theme');
+
+toggleTheme.addEventListener('click', () => {
+  if (toggleTheme.classList.contains("btn-uiverse")) {
+    toggleTheme.classList.remove("btn-uiverse");
+    toggleTheme.classList.add("btn-dark");
+    toggleTheme.innerHTML = "Toggle Light Mode";
+  } else {
+    toggleTheme.classList.remove("btn-dark");
+    toggleTheme.classList.add("btn-uiverse");
+    toggleTheme.innerHTML = "Toggle Dark Mode";
+  }
+});
+</script>
