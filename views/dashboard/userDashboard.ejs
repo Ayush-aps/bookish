@@ -1,13 +1,199 @@
-<main>
-  <%- include('../partials/header') %>
-    <%- include('../partials/nav') %>
+<style>
+  :root {
+  --primary-color: #212529;
+  --secondary-color: #a3b7f0;
+  --accent-color: #ffe619;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --border-radius: 8px;
+}
 
-      <div class="container mt-4">
-        <h2>User Dashboard</h2>
-        <p>Welcome, <%= user.name %>!</p>
-        <hr>
-        <p>This is where you can see your purchased books, reading list, etc.</p>
+.dark-mode {
+  --primary-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-color: #ffffff;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dashboard-main {
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif; /* optional font */
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.dashboard-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-color);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  padding: 12px;
+}
+
+.card-icon .icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.card-description {
+  font-size: 14px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<main class="dashboard-main">
+  <%- include('../partials/header') %>
+  <%- include('../partials/nav') %>
+
+  <div class="container dashboard-container mt-4">
+    <h2 class="dashboard-title">Your Account</h2>
+    <div class="dashboard-grid">
+      <!-- Purchase History -->
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <img src="/images/box-icon.svg" alt="Purchase History" class="icon">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Purchase History</h3>
+          <p class="card-description">View your orders and download history</p>
+        </div>
       </div>
 
-      <%- include('../partials/footer') %>
+      <!-- My Library -->
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <img src="/images/library-icon.svg" alt="My Library" class="icon">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">My Library</h3>
+          <p class="card-description">Access your purchased books and content</p>
+        </div>
+      </div>
+
+      <!-- My Addresses -->
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <img src="/images/location-icon.svg" alt="My Addresses" class="icon">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">My Addresses</h3>
+          <p class="card-description">Edit addresses for orders and gifts</p>
+        </div>
+      </div>
+
+      <!-- Security & Privacy -->
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <img src="/images/lock-icon.svg" alt="Security & Privacy" class="icon">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Security & Privacy</h3>
+          <p class="card-description">Edit login, name, and contact details</p>
+        </div>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="dashboard-card">
+        <div class="card-icon">
+          <img src="/images/card-icon.svg" alt="Payment Methods" class="icon">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Payment Methods</h3>
+          <p class="card-description">Edit or add payment options</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
 </main>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Get the theme toggle button from header
+  const themeToggleBtn = document.querySelector('.theme-toggle-btn');
+  
+  // Check for saved theme preference or default to light
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  
+  // Apply saved theme on page load
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    // If your button has an icon, you might want to update it
+    // themeToggleBtn.innerHTML = '☀️'; // sun icon for light mode
+  }
+  
+  // Toggle theme when button is clicked
+  themeToggleBtn.addEventListener('click', function() {
+    // Toggle dark mode class
+    document.body.classList.toggle('dark-mode');
+    
+    // Save preference to localStorage
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    
+    // Optional: Update button icon/text based on current theme
+    // themeToggleBtn.innerHTML = isDarkMode ? '☀️' : '🌙';
+  });
+});
+</script>
