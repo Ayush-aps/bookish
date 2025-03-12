@@ -194,29 +194,9 @@ p {
   margin-bottom: 1rem !important;
 }
 
-.footer {
-  background-color: #ffe619; /* Same as your existing color */
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  left: 0;
-}
-
-.footer-link{
-  color: black; /* Default link color */
-  text-decoration: none; /* Removes underline */
-  padding: 5px 10px; /* Adds spacing */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
-}
-
-.footer-link:hover{
-  color: white; /* Changes link color on hover */
-  background-color: black; /* Adds background color on hover */
-  border-radius: 5px; /* Adds rounded corners */
-} 
-
-.footer-ul{
-  border-bottom: #000 solid 1px;
+#empty{
+  /* display: none; */
+  height: 100px;
 }
 
 /* Responsive tweaks */
