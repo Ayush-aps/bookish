@@ -41,6 +41,20 @@
       "email": "daivik@gmail.com",
       "password": "$2b$10$H4zihkt3EkKeBJe8JfasY.hll7GiJGCXm.uFveZS3uaFR2fUz8b/K",
       "role": "user"
+    },
+    {
+      "id": "1741799783408",
+      "name": "kun",
+      "email": "kun@gmail.com",
+      "password": "$2b$10$DADv4XDfvpwR9bcwKjSvMuzT2CoyiMjhASW5kXQ2bUZ7NE4kgZbIS",
+      "role": "approvedSeller"
+    },
+    {
+      "id": "1741800115255",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "$2b$10$vpVMV4OlLmPy4HWTwlPmUOyPq3d.IhfybFRd3rZcdMT2j580y0Nke",
+      "role": "admin"
     }
   ],
   "books": [
@@ -115,6 +129,15 @@
       "price": 6.99,
       "image": "https://m.media-amazon.com/images/I/81OthjkJBuL._SL1500_.jpg",
       "ownerId": "3"
+    },
+    {
+      "id": "1741800274117",
+      "title": "Blue lock",
+      "author": "Muneyuki Kaneshiro",
+      "genre": "Fiction",
+      "price": 8,
+      "image": "https://m.media-amazon.com/images/I/81Z85oL1xvL._SY425_.jpg",
+      "ownerId": "1741799783408"
     }
   ],
   "reviews": [

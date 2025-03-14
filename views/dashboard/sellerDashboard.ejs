@@ -9,7 +9,7 @@
   <% if (currentUser.role === 'approvedSeller') { %>
     <a href="/books/add" class="btn btn-info mb-3">Add New Book</a>
   <% } else { %>
-    <p class="text-muted">
+    <p class="text-muted" style="color: white;">
       You are not approved to add books yet. Wait for admin approval.
     </p>
   <% } %>
@@ -45,4 +45,5 @@
   <% } %>
 </div>
 
+<div id="empty"></div>
 <%- include('../partials/footer') %>
