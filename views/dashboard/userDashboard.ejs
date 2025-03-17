@@ -170,7 +170,7 @@
               <img src="/images/book-cart.svg" alt="Payment Methods" class="icon">
             </div>
             <div class="card-content">
-              <h3 class="card-title">Rsell Books</h3>
+              <h3 class="card-title">Resell Books</h3>
               <p class="card-description">Resell your books with us at best rates!</p>
             </div>
           </div>
@@ -179,7 +179,7 @@
         </div>
       </div>
 
-      <div id="empty">
+      <div id="empty-250">
 
       </div>
 
@@ -187,27 +187,13 @@
 </main>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Get the theme toggle button from header
-    const themeToggleBtn = document.querySelector('.theme-toggle-btn');
-
-    // Check for saved theme preference or default to light
-    const savedTheme = localStorage.getItem('theme') || 'light';
-
-    // Apply saved theme on page load
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      // If your button has an icon, you might want to update it
-      // themeToggleBtn.innerHTML = '☀️'; // sun icon for light mode
-    }
-
-    // Add event listeners to dashboard cards
     const pageRoutes = {
-      "purchase-history": "/user/history.ejs",
-      "my-library": "/user/library.ejs",
-      "my-addresses": "/user/myAddresses.ejs",
-      "security-privacy": "/user/security.ejs",
-      "payment-methods": "/user/payments.ejs",
-      "resell": "/user/resell.ejs"
+      "purchase-history": "/user/history",
+      "my-library": "/user/library",
+      "my-addresses": "/user/myAddresses",
+      "security-privacy": "/user/security",
+      "payment-methods": "/user/payments",
+      "resell": "/user/resell"
     };
 
     document.querySelectorAll('.dashboard-card').forEach(card => {

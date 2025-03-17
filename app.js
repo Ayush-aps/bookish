@@ -14,6 +14,7 @@ const cartRoutes = require('./routes/cartRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const reviewRoutes = require('./routes/reviewRoutes');
+const userRoutes = require('./routes/userdashboard');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -63,6 +64,7 @@ app.get('/', (req, res) => {
 app.use('/', authRoutes);
 app.use('/books', bookRoutes);
 app.use('/cart', cartRoutes);
+app.use('/user', userRoutes);
 
 // Must be logged in to access /dashboard
 app.use('/dashboard', (req, res, next) => {

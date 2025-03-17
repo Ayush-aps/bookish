@@ -196,7 +196,11 @@ p {
 
 #empty{
   /* display: none; */
-  height: 150px;
+  height: 350px;
+}
+
+#empty-250{
+  height: 250px;
 }
 
 /* Responsive tweaks */
